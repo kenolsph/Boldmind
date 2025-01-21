@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLDMIND - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #fafaf9, #f5f5f4);
+            color: #1c1917;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .container {
+            max-width:px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: relative;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .logo img {
+      width: 250px;
+      height: 70px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .logo p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      color: #2c3e50;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.5s;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      animation: fadeInRight 1s ease-out;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #3498db;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: #3498db;
+      background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    nav a:hover::after {
+      width: 80%;
+    }
+
+    /* Shine effect */
+    .logo::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255,255,255,0.1) 45%,
+        rgba(255,255,255,0.5) 50%,
+        rgba(255,255,255,0.1) 55%,
+        transparent 100%
+      );
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
+        top: -100%;
+      }
+      100% {
+        left: 100%;
+        top: 100%;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .logo img {
+        width: 150px;
+        height: 48px;
+      }
+      
+      .logo p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+    }
+        /* Main Hero */
+        .main-hero {
+            height: 80vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #0ea5e9;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #0284c7;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 1rem;
+            background: #0ea5e9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Showcase Section */
+        .showcase {
+            padding: 6rem 0;
+            background: #f8fafc;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .showcase-item {
+            position: relative;
+            height: 400px;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .showcase-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .showcase-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+        }
+        /* Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #44403c;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e7e5e4;
+            border-radius: 0.5rem;
+            background: #fafaf9;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+        }
+
+        .error-message {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            display: none;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        button {
+            background: linear-gradient(to right, #0ea5e9, #6366f1);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 6rem 0;
+            background: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0ea5e9;
+            margin-bottom: 0.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(to right, #0ea5e9, #6366f1);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section .cta-button {
+            background: white;
+            color: #0ea5e9;
+        }
+
+        .cta-section .cta-button:hover {
+            background: #f8fafc;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            color: #57534e;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #a8a29e;
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0ea5e9;
+        }
+    </style>
+</head>
+<style>/* Modified Services Grid spacing */
+  .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem; /* Reduced from 2rem */
+      padding: 2rem 0; /* Reduced from 4rem */
+  }
+  
+  /* Modified Portfolio section spacing */
+  .portfolio {
+      padding: 2rem 0; /* Reduced from 4rem */
+  }
+  
+  .portfolio h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem; /* Reduced from 2rem */
+  }
+  
+  .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.5rem; /* Reduced from 1rem */
+      padding: 0.5rem; /* Reduced from 1rem */
+  }
+  
+  /* Reduced hero section padding */
+  .hero {
+      text-align: center;
+      padding: 3rem 0; /* Reduced from 5rem */
+      background: white;
+  }
+  
+  /* Adjust main-hero section height */
+  .main-hero {
+      height: 60vh; /* Reduced from 80vh */
+  }
+  
+  .slideshow-container {
+      height: 400px; /* Reduced from 500px */
+  }
+  
+  /* Adjust footer spacing */
+  footer {
+      padding: 1rem 0; /* Reduced from 2rem */
+      margin-top: 2rem; /* Reduced from 4rem */
+  }
+  
+  /* Adjust CTA section padding */
+  .cta {
+      padding: 50px 20px; /* Reduced from 100px 20px */
+  }</style>
+<body>
+  <header style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="logo">
+      <a href="Boldmind Home.html" style="text-decoration: none;">
+        <p style="font-size: 0;">
+          <span style="font-family: geometric sans-serif; font-size: 40px; color: #0ea5e9;">BOLD</span><span style="font-family: sans-serif; font-size: 38px; color: #000;">MIND</span>
+        </p>
+      </a>
+    </div>
+    <nav>
+      <a href="Boldmind Home.html">Home</a>
+      <a href="Boldmind About.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="Boldmind contact.html">Contact</a>
+    </nav>
+</header>
+ 
+
+<section class="main-hero">
+  <div class="slideshow-container">
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/9.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/1.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/2.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/4.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/5.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/6.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/7.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/8.jpeg')"></div>
+      <div class="slide fade" style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/image/9.jpeg')"></div>
+  </div>
+  <div class="hero-content">
+      <h1>Transform Your Brand's Visibility</h1>
+      <br>
+      <br>
+      <a href="services.html" class="cta-button">Explore Our Services</a>
+  </div>
+</section>
+
+<style>
+.main-hero {
+  height: 80vh; /* Changed to 100vh for full viewport height */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover !important; /* Force background-size: cover */
+  background-position: center center !important; /* Center the background image */
+  background-repeat: no-repeat !important; /* Prevent image repetition */
+  -webkit-backface-visibility: hidden; /* Prevent white flash in webkit browsers */
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Hardware acceleration */
+  perspective: 1000;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  background: #0284c7;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+  
+  .main-hero {
+      height: 80vh; /* Slightly shorter on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+}
+</style>
+
+<script>
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlides() {
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    
+    slides[slideIndex - 1].classList.add('active');
+    
+    setTimeout(showSlides, 5000);
+}
+
+// Start the slideshow when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    // Show first slide immediately
+    slides[0].classList.add('active');
+    // Start the slideshow
+    setTimeout(showSlides, 2000);
+});
+
+// Preload images for smoother transitions
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => {
+        const backgroundImage = slide.style.background;
+        const imageUrl = backgroundImage.match(/url\(['"]?(.*?)['"]?\)/);
+        if (imageUrl && imageUrl[1]) {
+            const img = new Image();
+            img.src = imageUrl[1];
+        }
+    });
+});
+</script>
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+          background: #ffffff;
+        }
+    
+        .features {
+          padding: 6rem 0;
+          background: #ffffff;
+          position: relative;
+          overflow: hidden;
+        }
+    
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 2rem;
+        }
+    
+        .section-title {
+          text-align: center;
+          margin-bottom: 4rem;
+          position: relative;
+        }
+    
+        .section-title h2 {
+          font-size: 2.5rem;
+          color: #1a1a1a;
+          margin-bottom: 1rem;
+        }
+    
+        .section-title p {
+          color: #666;
+          font-size: 1.1rem;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+    
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+          gap: 2.5rem;
+          margin-top: 2rem;
+        }
+    
+        .feature-card {
+          background: white;
+          border-radius: 1.5rem;
+          padding: 2.5rem;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          opacity: 0;
+          transform: translateY(30px);
+          position: relative;
+          overflow: hidden;
+          border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    
+        .feature-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        }
+    
+        .feature-icon {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 1.5rem;
+          position: relative;
+          z-index: 2;
+          background: #f8f9fa;
+          border-radius: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.3s ease;
+        }
+    
+        .feature-icon svg {
+          width: 40px;
+          height: 40px;
+          fill: #4f46e5;
+          transition: transform 0.3s ease;
+        }
+    
+        .feature-card:hover .feature-icon {
+          transform: scale(1.1);
+          background: #4f46e5;
+        }
+    
+        .feature-card:hover .feature-icon svg {
+          transform: scale(1.1);
+          fill: white;
+        }
+    
+        .feature-image {
+          width: 100%;
+          height: 200px;
+          margin: 1.5rem 0;
+          border-radius: 1rem;
+          overflow: hidden;
+          position: relative;
+          background: #f8f9fa;
+        }
+    
+        .feature-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+    
+        .feature-card:hover .feature-image img {
+          transform: scale(1.1);
+        }
+    
+        .feature-card h3 {
+          color: #1a1a1a;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          position: relative;
+          z-index: 2;
+        }
+    
+        .feature-card p {
+          color: #666;
+          line-height: 1.7;
+          position: relative;
+          z-index: 2;
+        }
+    
+        .feature-cta {
+          margin-top: 1.5rem;
+          display: inline-flex;
+          align-items: center;
+          color: #4f46e5;
+          font-weight: 600;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+    
+        .feature-cta svg {
+          width: 20px;
+          height: 20px;
+          margin-left: 0.5rem;
+          transition: transform 0.3s ease;
+        }
+    
+        .feature-card:hover .feature-cta {
+          color: #3c348b;
+        }
+    
+        .feature-card:hover .feature-cta svg {
+          transform: translateX(5px);
+        }
+    
+        /* Animation classes */
+        .fade-in {
+          animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+    
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+    
+        /* Responsive design */
+        @media (max-width: 768px) {
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
+          
+          .feature-card {
+            padding: 2rem;
+          }
+    
+          .section-title h2 {
+            font-size: 2rem;
+          }
+        }
+      </style>
+<section class="hero">
+  <div class="container">
+    <h2 class="centered">About Us</h2>
+    <p class="centered">Boldmind Integrated Resources is a dynamic media company specializing in indoor and outdoor advertising. We combine strategy, creativity, and passion to deliver authentic brand stories that give our clients a competitive edge.
+      .</p>
+    <div class="button-container">
+      <a href="Boldmind About.html" class="learn-more-btn">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+h2 {
+  color: #3498db;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+p {
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.learn-more-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+</style>
+<section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Strategic Locations</h3>
+          <div class="feature-image">
+            <img src="/image/8.jpeg" alt="Strategic billboard locations">
+          </div>
+          <p>Access prime billboard and advertising spots in high-traffic areas across major cities, strategically positioned for maximum visibility and impact.</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L16 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Targeted Reach</h3>
+          <div class="feature-image">
+            <img src="/image/L 12.jpeg" alt="Targeted audience reach">
+          </div>
+          <p>Reach your ideal audience with precision targeting options, leveraging demographic data and location analytics to maximize your campaign effectiveness.</p>
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L16 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Data-Driven Results</h3>
+          <div class="feature-image">
+            <img src="/Image/happy-afroamerican-businessman-medium-shot_23-2148508879.jpg" alt="Analytics dashboard">
+          </div>
+          <p>Track your campaign performance with comprehensive analytics and real-time insights, enabling data-driven decisions to optimize your advertising strategy.</p>
+         
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor">
+              <path d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L16 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Intersection Observer for scroll-based animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '20px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all feature cards
+    document.querySelectorAll('.feature-card').forEach(card => {
+      observer.observe(card);
+    });
+
+    // Add hover states for feature cards
+    document.querySelectorAll('.feature-card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-10px) scale(1.02)';
+      });
+
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  </script>
+
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <p>Locations</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12+</div>
+                    <p>Cities Covered</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="partners">
+      <div class="container">
+          <h2 class="partners-title">Our Partners</h2>
+          <div class="partners-grid">
+              <div class="partner-card" data-company="Nestle">
+                  <div class="partner-inner">
+                      <img src="/Image/Nestle.png" alt="Nestle" />
+                      <h3>Nestle</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Opay">
+                  <div class="partner-inner">
+                      <img src="/Image/Opay.png" alt="Opay" />
+                      <h3>Opay</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Dangote">
+                  <div class="partner-inner">
+                      <img src="/Image/Dangote.png" alt="Dangote" />
+                      <h3>Dangote</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Airtel">
+                  <div class="partner-inner">
+                      <img src="/Image/Airtel.png" alt="Airtel" />
+                      <h3>Airtel</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Cocacola">
+                  <div class="partner-inner">
+                      <img src="/Image/Coke.png" alt="Cocacola" />
+                      <h3>Cocacola</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Guinness">
+                  <div class="partner-inner">
+                      <img src="/Image/Guinness.png" alt="Guinness" />
+                      <h3>Guinness</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Jumia">
+                  <div class="partner-inner">
+                      <img src="/Image/40.png" alt="Jumia" />
+                      <h3>Jumia</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Lagos">
+                  <div class="partner-inner">
+                      <img src="/Image/Lagos.jpg" alt="Lagos" />
+                      <h3>Lagos</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Glo">
+                  <div class="partner-inner">
+                      <img src="/Image/Glo.jpg" alt="Glo" />
+                      <h3>Glo</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    <style>
+    .partners {
+      padding: 4rem 0;
+      background: #f8f9fa;
+      overflow: hidden;
+    }
+    
+    .partners-title {
+      text-align: center;
+      color: #0ea5e9;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .partner-card {
+      position: relative;
+      height: 150px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+      transition: all 0.3s ease;
+    }
+    
+    .partner-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card h3 {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .partner-card:hover .partner-inner {
+      transform: translateY(-5px);
+    }
+    
+    .partner-card:hover img {
+      transform: scale(1.1);
+    }
+    
+    .partner-card:hover h3 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    }
+    
+    /* Staggered animation delay for cards */
+    .partner-card:nth-child(1) { animation-delay: 0.1s; }
+    .partner-card:nth-child(2) { animation-delay: 0.2s; }
+    .partner-card:nth-child(3) { animation-delay: 0.3s; }
+    .partner-card:nth-child(4) { animation-delay: 0.4s; }
+    .partner-card:nth-child(5) { animation-delay: 0.5s; }
+    .partner-card:nth-child(6) { animation-delay: 0.6s; }
+    .partner-card:nth-child(7) { animation-delay: 0.7s; }
+    .partner-card:nth-child(8) { animation-delay: 0.8s; }
+    .partner-card:nth-child(9) { animation-delay: 0.9s; }
+    
+    @media (max-width: 768px) {
+      .partners-grid {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 1rem;
+      }
+    
+      .partner-card {
+          height: 120px;
+      }
+    
+      .partner-card img {
+          width: 60px;
+          height: 60px;
+      }
+    
+      .partner-card h3 {
+          font-size: 0.8rem;
+      }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+          threshold: 0.2,
+          rootMargin: '50px'
+      };
+    
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.style.opacity = '1';
+                  entry.target.style.transform = 'translateY(0)';
+                  observer.unobserve(entry.target);
+              }
+          });
+      }, observerOptions);
+    
+      // Observe all partner cards
+      document.querySelectorAll('.partner-card').forEach(card => {
+          observer.observe(card);
+      });
+    
+      // Add hover effect with mouse position
+      document.querySelectorAll('.partner-card').forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              
+              const xPercent = (x / rect.width - 0.5) * 20;
+              const yPercent = (y / rect.height - 0.5) * 20;
+              
+              card.style.transform = `perspective(1000px) rotateX(${-yPercent}deg) rotateY(${xPercent}deg) scale3d(1.02, 1.02, 1.02)`;
+          });
+    
+          card.addEventListener('mouseleave', () => {
+              card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          });
+      });
+    });
+    </script>
+<section>
+    <div class="container">
+      <div class="main-content">
+          <div class="card">
+            <h2 style="text-align: center; color: #0ea5e9;">Get in Touch</h2>
+              <form id="contactForm">
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name">
+                      <small class="error-message">Please enter your name.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email">
+                      <small class="error-message">Please enter a valid email address.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone</label>
+                      <input type="tel" id="phone" name="phone">
+                      <small class="error-message">Please enter your phone number.</small>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="4"></textarea>
+                      <small class="error-message">Please enter your message.</small>
+                  </div>
+                  <div style="text-align: center;">
+                      <button type="submit">Send Message</button>
+                  </div>
+              </form>
+          </div> <br>
+        </section>
+
+    <footer>
+        <div class="container" >
+            <p style="color: #0ea5e9;">©️ 2020 BOLDMIND All rights reserved.</p>
+            <div class="social-links">
+              
+                <a href="https://www.instagram.com/boldmind_outdoor?igsh=MWJwaWx0dzdra2p3dA==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      const logo = document.querySelector('.logo img');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Parallax effect on mouse move
+      container.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      });
+      
+      // Reset transform on mouse leave
+      container.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+
+      // Add active state to navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Add intersection observer for reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(container);
+    });
+  </script>
+</html>
