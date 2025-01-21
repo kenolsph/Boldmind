@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://127.0.0.1:3000/Boldmind%20contact.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./BOLDMIND - Contact Us_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLDMIND - Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #fafaf9, #f5f5f4);
+            color: #1c1917;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+       
+        .container {
+      max-width: 15000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: relative;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .logo img {
+      width: 250px;
+      height: 70px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .logo p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      color: #2c3e50;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.5s;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      animation: fadeInRight 1s ease-out;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #3498db;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: #3498db;
+      background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    nav a:hover::after {
+      width: 80%;
+    }
+
+    /* Shine effect */
+    .logo::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255,255,255,0.1) 45%,
+        rgba(255,255,255,0.5) 50%,
+        rgba(255,255,255,0.1) 55%,
+        transparent 100%
+      );
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
+        top: -100%;
+      }
+      100% {
+        left: 100%;
+        top: 100%;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .logo img {
+        width: 150px;
+        height: 48px;
+      }
+      
+      .logo p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+    }
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.875rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #44403c;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #e7e5e4;
+            border-radius: 0.5rem;
+            background: #fafaf9;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #0ea5e9;
+            box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
+        }
+
+        .error-message {
+            color: #d32f2f;
+            font-size: 0.875rem;
+            display: none;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        button {
+            background: linear-gradient(to right, #0ea5e9, #6366f1);
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        button:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .icon-wrapper {
+            background: #f5f5f4;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: #0ea5e9;
+        }
+
+        .contact-info-text {
+            color: #57534e;
+        }
+
+        .contact-info-text strong {
+            display: block;
+            color: #1c1917;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Hours Card */
+        .hours-card {
+            margin-top: 2rem;
+        }
+
+        .hours-card h3 {
+            font-size: 1.25rem;
+        }
+
+        .hours-card p {
+            color: #57534e;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #57534e;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #a8a29e;
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0ea5e9;
+        }
+    </style>
+</head>
+<body>
+  <header style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="logo">
+      <a href="http://127.0.0.1:3000/Boldmind%20Home.html" style="text-decoration: none;">
+        <p style="font-size: 0;">
+          <span style="font-family: geometric sans-serif; font-size: 40px; color: #0ea5e9;">BOLD</span><span style="font-family: sans-serif; font-size: 38px; color: #000;">MIND</span>
+        </p>
+      </a>
+    </div>
+    <nav>
+      <a href="http://127.0.0.1:3000/Boldmind%20Home.html">Home</a>
+      <a href="http://127.0.0.1:3000/Boldmind%20About.html">About</a>
+      <a href="http://127.0.0.1:3000/services.html">Services</a>
+      <a href="http://127.0.0.1:3000/Boldmind%20contact.html">Contact</a>
+    </nav>
+</header>
+
+
+    <section class="hero">
+        <div class="container" style="opacity: 1; transform: translateY(0px);">
+            <h2 style="color: #0ea5e9;">Let's Create Something Amazing Together</h2>
+            <p>Whether you have a question, a project in mind, or just want to say hello, we're here to listen and collaborate.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="card">
+                <h3 style="color: #0ea5e9;">Get in Touch</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                        <small class="error-message">Please enter your name.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                        <small class="error-message">Please enter a valid email address.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                        <small class="error-message">Please enter your phone number.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                        <small class="error-message">Please enter your message.</small>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <div class="card">
+                    <h3 style="color: #0ea5e9;">Visit Us</h3>
+                    <div class="contact-info">
+                        <div class="icon-wrapper">📍</div>
+                        <div class="contact-info-text">
+                            <strong>Our Office</strong>
+ PLOT  19, ADEKUNLE FAJUYI STREET, OFF OLUTOYE CRESCENT (AFRA) 
+ESTATE<br>
+ IKEJA | LAGOS | NIGERIA
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="icon-wrapper">📞</div>
+                        <div class="contact-info-text">
+                            <strong>Phone</strong>
+                            (+234)802 308 2417,  (+234) 806 298 6174
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="icon-wrapper">✉️</div>
+                        <div class="contact-info-text">
+                            <strong>Email</strong>
+                            BOLDMINDOUTDOOR@GMAIL.COM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p style="color: #0ea5e9;">© 2020 BOLDMIND All rights reserved.</p>
+            <div class="social-links">
+              
+                <a href="https://www.instagram.com/boldmind_outdoor?igsh=MWJwaWx0dzdra2p3dA==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let isValid = true;
+            const inputs = this.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                const error = input.nextElementSibling;
+                if (!input.value.trim()) {
+                    error.style.display = 'block';
+                    isValid = false;
+                } else {
+                    error.style.display = 'none';
+                }
+            });
+            if (isValid) {
+                alert('Thank you for contacting us! Your message has been sent.');
+                this.reset(); // Reset the form if valid
+            }
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      const logo = document.querySelector('.logo img');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Parallax effect on mouse move
+      container.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      });
+      
+      // Reset transform on mouse leave
+      container.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+
+      // Add active state to navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Add intersection observer for reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(container);
+    });
+  </script>
+
+
+</body></html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://127.0.0.1:3000/Boldmind%20About.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./BOLDMIND - About Us_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLDMIND - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #fafaf9, #f5f5f4);
+            color: #1c1917;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .container {
+      max-width: 15000px;
+      margin: 0 auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      position: relative;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .logo img {
+      width: 250px;
+      height: 70px;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .logo p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      color: #2c3e50;
+      margin-top: 15px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+      animation-delay: 0.5s;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 2rem;
+      animation: fadeInRight 1s ease-out;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #3498db;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    nav a:hover {
+      color: #3498db;
+      background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    nav a:hover::after {
+      width: 80%;
+    }
+
+    /* Shine effect */
+    .logo::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255,255,255,0.1) 45%,
+        rgba(255,255,255,0.5) 50%,
+        rgba(255,255,255,0.1) 55%,
+        transparent 100%
+      );
+      transform: rotate(45deg);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        left: -100%;
+        top: -100%;
+      }
+      100% {
+        left: 100%;
+        top: 100%;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .logo img {
+        width: 150px;
+        height: 48px;
+      }
+      
+      .logo p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+    }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #0ea5e9, #6366f1);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #57534e;
+            font-size: 1.125rem;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        /* History Section */
+        .history {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .history h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1c1917;
+        }
+
+        .history p {
+            color: #57534e;
+            max-width: 42rem;
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .team h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1c1917;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #1c1917;
+        }
+
+        .team-member .title {
+            color: #57534e;
+            margin-bottom: 1rem;
+        }
+
+        /* Goals Section */
+        .goals {
+            padding: 4rem 0;
+        }
+
+        .goals h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1c1917;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .goal-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1c1917;
+        }
+
+        /* Partners Section */
+        .partners {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .partners h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1c1917;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .partner-card img {
+            width: 128px;
+            height: 128px;
+            margin-bottom: 1rem;
+            object-fit: contain;
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            color: #57534e;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #a8a29e;
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0ea5e9;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #1c1917;
+        }
+
+        .service-content p {
+            color: #57534e;
+            margin-bottom: 1rem;
+        }
+
+        .service-content .price {
+            font-weight: bold;
+            color: #0ea5e9;
+        }
+
+    </style>
+</head>
+<body>
+  <header style="display: flex; align-items: center; justify-content: space-between;">
+    <div class="logo">
+      <a href="http://127.0.0.1:3000/Boldmind%20Home.html" style="text-decoration: none;">
+        <p style="font-size: 0;">
+          <span style="font-family: geometric sans-serif; font-size: 40px; color: #0ea5e9;">BOLD</span><span style="font-family: sans-serif; font-size: 38px; color: #000;">MIND</span>
+        </p>
+      </a>
+    </div>
+    <nav>
+      <a href="http://127.0.0.1:3000/Boldmind%20Home.html">Home</a>
+      <a href="http://127.0.0.1:3000/Boldmind%20About.html">About</a>
+      <a href="http://127.0.0.1:3000/services.html">Services</a>
+      <a href="http://127.0.0.1:3000/Boldmind%20contact.html">Contact</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div class="container" style="opacity: 1; transform: translateY(0px);">
+            <h1>About Us</h1>
+            <p>Boldmind Integrated Resources is a young and dynamic media company that specializes in indoor and Out of Home advertising.
+                We are ultimately inspired by our client’s message and demand a competitive edge in the marketplace by clearly delivering their vision to their audience because we believe that elevated positioning, economic success, and market presence for companies is developed from strategic thinking, a smart approach, creative insight and a passion for positioning.
+                Consequently, our intuition and experience are combined to create an authentic brand story.</p>
+        </div>
+    </section>
+    <br>
+        <br>
+    <h2 style="color: #0ea5e9; text-align: center;">OUR MAIN FOCUS</h2>
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-content">
+                    <h3 style="color: #0ea5e9;">Outdoor Advertising</h3>
+                    <p>Our mission is to elevate the entire out-of-home medium, by connecting advertisers with the best assets, audiences, innovations, and people in the business. Our commitment is to always be out front and ahead of the curve, thereby helping our clients grow and prosper</p>
+                </div>
+            </div>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3 style="color: #0ea5e9;">Branding</h3>
+                            <p>We create expressions for brands that are unique, unambiguous and 
+                                consistent, and initiate participation through a series of activities that
+                                 are designed to inform,engross, transform and motivate businesses. 
+                                We nurturebrand growth through design development, identity
+                                 creation and rejuvenation.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3 style="color: #0ea5e9;">OOH Advertisement</h3>
+                            <p>We are a full-service Out-of-Home (OOH) advertising company 
+                                that believes brands should achieve their campaign and maximize 
+                                their returns from Out- of-Home (OOH) campaigns on minimal 
+                                budget. We professionally plan and execute client’s campaign, 
+                                growing their businesses via strategic brand exposures.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-content">
+                            <h3 style="color: #0ea5e9;">Our Capacities</h3>
+                            <p>Media Planning + Placement<br>
+                                • Outdoor / Billboards<br>
+                                • Indoor Advertising<br>
+                                • Radio, Television &amp; Print<br>
+                                • Electronic, Digital &amp; Online<br>
+                                • Large Format Printing</p>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+
+    <section class="team">
+        <div class="container">
+            <h2 style="color: #0ea5e9;">Our Team</h2>
+            <p style="text-align: center;"> Our success formula combine experienced, creative and strategic
+                thinkers with deep  knowledge of the advertising industry.<br><br>
+                We have a solid team of professionals with diverse proficiencies in the 
+               advertising industry</p><br><br><br>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="./BOLDMIND - About Us_files/EZE.jpeg" alt="QUINCY NWANKWO">
+                    <h3 style="color: #0ea5e9;">QUINCY NWANKWO</h3>
+                    <div class="title">MD/CEO</div>
+                    <p>Quincy is the MD/CEO of Boldmind he experience in
+                        Advertising, Media, Communication, branding and Marketing 
+                       industries.<br>
+                        He is a graduate of Plant Physiology &amp; Crop Ecology
+                        The University of Agriculture Abeokuta
+                        2nd Degree: Entrepreneurial &amp; Business Management in National Open 
+                       University Lagos.<br> <br>
+                       Full Member (APCON)<br><br>
+                        Full Member (OAAN)</p>
+                </div>
+                <div class="team-member">
+                    <img src="./BOLDMIND - About Us_files/Ugochi.jpeg" alt="UGOCHI LEBECHUKWU">
+                    <h3 style="color: #0ea5e9;">UGOCHI LEBECHUKWU</h3>
+                    <div class="title">FINANCE + ADMIN</div>
+                    <p>Adetail-oriented, efficient and organizedprofessional with extensive
+                        experience in administrative functions.<br> She coordinates the 
+                       administrative activities amongst the various departments to support 
+                       the daily effective running of the company. 
+                       She is trustworthy, discreet and ethical.<br>
+                        Ugochi is a graduated from Enugu State    
+                       University of Science and Technology with a bachelor’s degree in 
+                       Banking &amp; Finance</p>
+                </div>
+                <div class="team-member">
+                    <img src="./BOLDMIND - About Us_files/yinka.jpeg" alt="YINKA">
+                    <h3 style="color: #0ea5e9;">OLAYINKA OLOLADE</h3>
+                    <div class="title">MANAGEMENT TRAINEE</div>
+                    <p>Yinka is a qualified communicator with extensive 
+                        background in advanced management process.<br>
+                         He utilizes superior communication skills to build 
+                        meaningful, trusting relationship that exceed client 
+                        demands. He displays outstanding knowledge and 
+                        practical expertise to provide service.<br>
+                         Yinka holds a B.S.C  in Mass Communication  from 
+                        Oduduwa University Ipetumodu, ile-ife, Osun State 
+                        Nigeria</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="goals">
+        <div class="container">
+            <h2 style="color: #0ea5e9;">Our Methodology</h2>
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <h3 style="color: #0ea5e9;">Research + Identity</h3>
+                    <p> By determining trends, taking into cognizance competition and 
+                        observing activities, we facilitate our ability to evaluate the gap
+                         between a company and its goals and bring to light the synthesis 
+                        of the relationship between a brand and its audience</p>
+                </div>
+                <div class="goal-card">
+                    <h3 style="color: #0ea5e9;"> Plan + Simplify</h3>
+                    <p> While we think out of the box, we also take into
+                        consideration established guidelines in creating images that 
+                       are not only unique and striking, but also sustain the brand
+                        in its delivery through all channels for effective
+                        communication</p>
+                </div>
+                <div class="goal-card">
+                    <h3 style="color: #0ea5e9;">Create + Engage</h3>
+                    <p> We ensure that design solutions establish an audience’s connection
+                        with a brand through various channels by theassimilation of a
+                        brand’s message and the engaging in aconversation with it, thereby
+                        nurturing confidence in it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+      <div class="container">
+          <h2 class="partners-title">Our Partners</h2>
+          <div class="partners-grid">
+              <div class="partner-card" data-company="Nestle">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Nestle.png" alt="Nestle">
+                      <h3>Nestle</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Opay">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Opay.png" alt="Opay">
+                      <h3>Opay</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Dangote">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Dangote.png" alt="Dangote">
+                      <h3>Dangote</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Airtel">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Airtel.png" alt="Airtel">
+                      <h3>Airtel</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Cocacola">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Coke.png" alt="Cocacola">
+                      <h3>Cocacola</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Guinness">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Guinness.png" alt="Guinness">
+                      <h3>Guinness</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Jumia">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/40.png" alt="Jumia">
+                      <h3>Jumia</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Lagos">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Lagos.jpg" alt="Lagos">
+                      <h3>Lagos</h3>
+                  </div>
+              </div>
+              <div class="partner-card" data-company="Glo">
+                  <div class="partner-inner">
+                      <img src="./BOLDMIND - About Us_files/Glo.jpg" alt="Glo">
+                      <h3>Glo</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    <style>
+    .partners {
+      padding: 4rem 0;
+      background: #f8f9fa;
+      overflow: hidden;
+    }
+    
+    .partners-title {
+      text-align: center;
+      color: #0ea5e9;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .partner-card {
+      position: relative;
+      height: 150px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+      transition: all 0.3s ease;
+    }
+    
+    .partner-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .partner-card h3 {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+    }
+    
+    .partner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .partner-card:hover .partner-inner {
+      transform: translateY(-5px);
+    }
+    
+    .partner-card:hover img {
+      transform: scale(1.1);
+    }
+    
+    .partner-card:hover h3 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+    }
+    
+    /* Staggered animation delay for cards */
+    .partner-card:nth-child(1) { animation-delay: 0.1s; }
+    .partner-card:nth-child(2) { animation-delay: 0.2s; }
+    .partner-card:nth-child(3) { animation-delay: 0.3s; }
+    .partner-card:nth-child(4) { animation-delay: 0.4s; }
+    .partner-card:nth-child(5) { animation-delay: 0.5s; }
+    .partner-card:nth-child(6) { animation-delay: 0.6s; }
+    .partner-card:nth-child(7) { animation-delay: 0.7s; }
+    .partner-card:nth-child(8) { animation-delay: 0.8s; }
+    .partner-card:nth-child(9) { animation-delay: 0.9s; }
+    
+    @media (max-width: 768px) {
+      .partners-grid {
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 1rem;
+      }
+    
+      .partner-card {
+          height: 120px;
+      }
+    
+      .partner-card img {
+          width: 60px;
+          height: 60px;
+      }
+    
+      .partner-card h3 {
+          font-size: 0.8rem;
+      }
+    }
+    </style>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+          threshold: 0.2,
+          rootMargin: '50px'
+      };
+    
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.style.opacity = '1';
+                  entry.target.style.transform = 'translateY(0)';
+                  observer.unobserve(entry.target);
+              }
+          });
+      }, observerOptions);
+    
+      // Observe all partner cards
+      document.querySelectorAll('.partner-card').forEach(card => {
+          observer.observe(card);
+      });
+    
+      // Add hover effect with mouse position
+      document.querySelectorAll('.partner-card').forEach(card => {
+          card.addEventListener('mousemove', (e) => {
+              const rect = card.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              
+              const xPercent = (x / rect.width - 0.5) * 20;
+              const yPercent = (y / rect.height - 0.5) * 20;
+              
+              card.style.transform = `perspective(1000px) rotateX(${-yPercent}deg) rotateY(${xPercent}deg) scale3d(1.02, 1.02, 1.02)`;
+          });
+    
+          card.addEventListener('mouseleave', () => {
+              card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+          });
+      });
+    });
+    </script>
+
+    <footer>
+        <div class="container">
+            <p style="color: #0ea5e9;">© 2020 BOLDMIND All rights reserved.</p>
+            <div class="social-links">
+              
+                <a href="https://www.instagram.com/boldmind_outdoor?igsh=MWJwaWx0dzdra2p3dA==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      const logo = document.querySelector('.logo img');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Parallax effect on mouse move
+      container.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      });
+      
+      // Reset transform on mouse leave
+      container.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+
+      // Add active state to navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Add intersection observer for reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(container);
+    });
+  </script>
+
+</body></html>

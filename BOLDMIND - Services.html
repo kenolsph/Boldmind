@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:3000/services.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./BOLDMIND - Services_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLDMIND - Services</title>
+    <script src="https://www.google.com/maps/@6.5289232,3.3506131,16.24z?hl=en&amp;entry=ttu&amp;g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" async="" defer=""></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to bottom, #fafaf9, #f5f5f4);
+            color: #1c1917;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 15000px;
+            margin: 0 auto;
+            padding: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            position: relative;
+            text-align: center;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo img {
+            width: 250px;
+            height: 70px;
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 24px;
+            color: #2c3e50;
+            margin-top: 15px;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: 0.5s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover {
+            color: #3498db;
+            background-color: rgba(52, 152, 219, 0.1);
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 2rem 0;
+            background: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #0ea5e9, #6366f1);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #57534e;
+            font-size: 1.125rem;
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .main-hero {
+            height: 50vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            transform: translateZ(0);
+            perspective: 1000;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1.5rem 0;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 1rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #1c1917;
+        }
+
+        .service-content p {
+            color: #57534e;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio {
+            padding: 1.5rem 0;
+            background: white;
+        }
+
+        .portfolio h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            height: 200px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .cta {
+            position: relative;
+            text-align: center;
+            padding: 40px 20px;
+            background: #3498db;
+            color: white;
+            overflow: hidden;
+        }
+
+        .cta::before, .cta::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(0);
+            border-radius: 50%;
+            z-index: 0;
+            animation: ripple 6s infinite;
+        }
+
+        .cta::after {
+            animation-delay: 3s;
+        }
+
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            animation: fadeInDown 1.5s;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        .cta-button {
+            text-decoration: none;
+            padding: 15px 30px;
+            background: white;
+            color: #2575fc;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            animation: fadeInUp 2.5s;
+        }
+
+        .cta-button:hover {
+            background: #2575fc;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            background: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+
+        footer p {
+            color: #57534e;
+        }
+
+        .social-links {
+            margin-top: 0.5rem;
+        }
+
+        .social-links a {
+            color: #a8a29e;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #0ea5e9;
+        }
+
+        @keyframes fadeInDown {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeInUp {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes ripple {
+            0% {transform: scale(0); opacity: 1;}
+            100% {transform: scale(4); opacity: 0;}
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .logo img {
+                width: 150px;
+                height: 48px;
+            }
+            
+            .logo p {
+                font-size: 18px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 16px;
+                padding: 6px 12px;
+            }
+
+            .main-hero {
+                height: 40vh;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="logo">
+            <a href="http://127.0.0.1:3000/Boldmind%20Home.html" style="text-decoration: none;">
+                <p style="font-size: 0;">
+                    <span style="font-family: geometric sans-serif; font-size: 40px; color: #0ea5e9;">BOLD</span><span style="font-family: sans-serif; font-size: 38px; color: #000;">MIND</span>
+                </p>
+            </a>
+        </div>
+        <nav>
+            <a href="http://127.0.0.1:3000/Boldmind%20Home.html">Home</a>
+            <a href="http://127.0.0.1:3000/Boldmind%20About.html">About</a>
+            <a href="http://127.0.0.1:3000/services.html">Services</a>
+            <a href="http://127.0.0.1:3000/Boldmind%20contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="container" style="opacity: 1; transform: translateY(0px);">
+            <h1>Our Services</h1>
+            <p>Discover our range of premium advertising solutions designed to make your brand stand out.</p>
+        </div>
+    </section>
+
+    <section class="main-hero">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/7.jpeg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/1.jpeg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/2.jpeg" alt="Slide 3">
+            </div>
+            <div class="slide fade active">
+                <img src="./BOLDMIND - Services_files/4.jpeg" alt="Slide 4">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/5.jpeg" alt="Slide 5">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/6.jpeg" alt="Slide 6">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/7.jpeg" alt="Slide 7">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/8.jpeg" alt="Slide 8">
+            </div>
+            <div class="slide fade">
+                <img src="./BOLDMIND - Services_files/9.jpeg" alt="Slide 9">
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="./BOLDMIND - Services_files/8(1).jpeg" alt="Billboard Advertising" class="service-image">
+                <div class="service-content">
+                    <h3>Premium Billboard Locations</h3>
+                    <p>Strategic billboard placements in high-traffic areas across major cities.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="./BOLDMIND - Services_files/L 9.jpeg" alt="Lamp Post Advertising" class="service-image">
+                <div class="service-content">
+                    <h3>Lamp Post Advertising</h3>
+                    <p>Eye-level advertising perfect for urban areas and pedestrian zones.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="./BOLDMIND - Services_files/B 13.jpeg" alt="Bus Advertising" class="service-image">
+                <div class="service-content">
+                    <h3>Bus Stop Displays</h3>
+                    <p>Targeted advertising at public transports.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(to bottom, #e6f7ff, #ffffff);
+        }
+    
+        .section {
+          padding: 20px;
+          max-width: 800px;
+          margin: auto;
+        }
+    
+        .section h1 {
+          text-align: center;
+          font-size: 2.5em;
+          color: #2a7ba7;
+          animation: fadeIn 1.5s;
+        }
+    
+        .locations {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          gap: 20px;
+        }
+    
+        .location {
+          background: #ffffff;
+          border: 1px solid #d9d9d9;
+          border-radius: 8px;
+          padding: 15px;
+          width: calc(50% - 20px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s;
+        }
+    
+        .location:hover {
+          transform: scale(1.05);
+        }
+    
+        .map {
+          height: 400px;
+          margin-top: 20px;
+          border-radius: 8px;
+        }
+    
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      </style>
+      <section> 
+        <div class="section">
+            <h1 style="color: #0ea5e9;">Our Locations in Lagos</h1><br>
+        
+            <div class="locations">
+              <div class="location">Capitol Road Agege</div>
+              <div class="location">Alakija, Amuwo Odofin</div>
+              <div class="location">Agboju Market, Amuwo Odofin</div><br>
+              <div class="location">Cele Express, Okota</div>
+              <div class="location">Akin Adesola, VI</div>
+              <div class="location">Oba Ogunji, Agege</div>
+              <div class="location">Elephant House, Lagos Island</div>
+              <div class="location">1st Avenue, Festac</div>
+              <div class="location">Capitol Road, Agege</div>
+              <div class="location">Ojuwoye Market, Mushin</div>
+              <div class="location">Ahmadu Bello Way, VI</div>
+              <div class="location">Bourdillon Road, Ikoyi</div>
+              <div class="location">Mobolaji Bank Anthony Way, Ikeja</div>
+              <div class="location">Kosofe Road, Berger</div>
+              <div class="location">Sunday Market, Ogba</div>
+              <div class="location">Oba Ogunji, Agege</div>
+            </div>
+        
+            <div id="map" class="map"></div>
+          </div>
+<script>
+     function initMap() {
+      const locations = [
+        { title: "Capitol Road Agege", position: { lat: 6.6164, lng: 3.3452 } },
+        { title: "Alakija, Amuwo Odofin", position: { lat: 6.4492, lng: 3.2906 } },
+        { title: "Agboju Market, Amuwo Odofin", position: { lat: 6.4562, lng: 3.3043 } },
+        { title: "Cele Express, Okota", position: { lat: 6.5413, lng: 3.3585 } },
+        { title: "Akin Adesola, VI", position: { lat: 6.4301, lng: 3.4218 } },
+        { title: "Oba Ogunji, Agege", position: { lat: 6.6245, lng: 3.3471 } },
+        { title: "Elephant House, Lagos Island", position: { lat: 6.4516, lng: 3.4021 } },
+        { title: "1st Avenue, Festac", position: { lat: 6.4668, lng: 3.2872 } }
+      ];
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: { lat: 6.5244, lng: 3.3792 }, // Centered on Lagos
+      });
+
+      locations.forEach((location) => {
+        const marker = new google.maps.Marker({
+          position: location.position,
+          map,
+          title: location.title,
+        });
+      });
+    }
+  </script>
+        
+      </section>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #e0e7ff);
+            color: #333;
+        }
+
+        .cta {
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            background: #3498db;
+            color: white;
+            overflow: hidden;
+        }
+
+        .cta::before, .cta::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(0);
+            border-radius: 50%;
+            z-index: 0;
+            animation: ripple 6s infinite;
+        }
+
+        .cta::after {
+            animation-delay: 3s;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .cta .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeInDown 1.5s;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2s;
+        }
+
+        .cta .cta-button {
+            text-decoration: none;
+            padding: 15px 30px;
+            background: white;
+            color: #2575fc;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+            animation: fadeInUp 2.5s;
+        }
+
+        .cta .cta-button:hover {
+            background: #2575fc;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+ <section class="cta">
+    <div class="container">
+        <h2 style="color:#3498db;">Ready to Advertise with Us?</h2>
+        <p style="color: #1c1917;">Let's discuss how we can help your brand reach its target audience.</p>
+        <a href="http://127.0.0.1:3000/Boldmind%20contact.html" class="cta-button">Contact Us Today</a>
+    </div>
+</section>
+    <footer>
+        <div class="container">
+            <p style="color: #0ea5e9;">©️ 2020 BOLDMIND All rights reserved.</p>
+            <div class="social-links">
+              
+                <a href="https://www.instagram.com/boldmind_outdoor?igsh=MWJwaWx0dzdra2p3dA==">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Slideshow functionality
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.slide-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Auto advance slides
+        setInterval(nextSlide, 2000);
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      const logo = document.querySelector('.logo img');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      // Parallax effect on mouse move
+      container.addEventListener('mousemove', (e) => {
+        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+        logo.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      });
+      
+      // Reset transform on mouse leave
+      container.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+
+      // Add active state to navigation
+      navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.forEach(l => l.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+      
+      // Add intersection observer for reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(container);
+    });
+  </script>
+
+</body></html>
